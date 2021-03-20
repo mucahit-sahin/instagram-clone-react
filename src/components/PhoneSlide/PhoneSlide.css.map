@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,OAAO,EAAE,IAAI;CAYd;;AAXC,MAAM,EAAE,SAAS,EAAE,KAAK;EAF1B,AAAA,WAAW,CAAC;IAGR,OAAO,EAAE,IAAI;GAUhB;;;AAbD,AAKE,WALS,CAKT,cAAc,CAAC;EACb,QAAQ,EAAE,QAAQ;CAMnB;;AAZH,AAOI,WAPO,CAKT,cAAc,CAEZ,GAAG,CAAC;EACF,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,KAAK;EACd,MAAM,EAAE,cAAc;CACvB",
+    "sources": [
+        "PhoneSlide.scss"
+    ],
+    "names": [],
+    "file": "PhoneSlide.css"
+}

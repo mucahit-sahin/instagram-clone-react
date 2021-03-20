@@ -1,0 +1,22 @@
+.phoneImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .phoneImage {
+    display: none;
+  }
+}
+
+.phoneImage .phoneImgSlide {
+  position: absolute;
+}
+
+.phoneImage .phoneImgSlide img {
+  position: absolute;
+  display: block;
+  margin: 99px 0 0 151px;
+}
+/*# sourceMappingURL=PhoneSlide.css.map */

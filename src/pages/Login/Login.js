@@ -1,14 +1,10 @@
 import React from "react";
+import PhoneSlide from "../../components/PhoneSlide/PhoneSlide";
 import "./Login.scss";
 const Login = () => {
   return (
     <div className="login">
-      <div className="phoneImage">
-        <img
-          src="https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png"
-          alt="phoneInstagram"
-        />
-      </div>
+      <PhoneSlide />
       <div className="loginPanels">
         <div className="loginPanel">
           <div className="logo">

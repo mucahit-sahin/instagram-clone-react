@@ -1,3 +1,6 @@
+body {
+  background-color: #fafafa;
+}
 .login {
   display: flex;
   flex-direction: row;
@@ -8,17 +11,15 @@
   margin: 0px auto;
   background-color: #fafafa;
 
-  .phoneImage {
-    display: flex;
-    flex: 0.5;
-  }
   .loginPanels {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 350px;
     .loginPanel {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       background-color: white;
       border: 1px solid #dbdbdb;
       padding: 10px 0px;
