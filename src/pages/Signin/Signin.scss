@@ -1,0 +1,128 @@
+.signin {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  background-color: #fafafa;
+  .signinPanel {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    padding: 0px 40px;
+    margin-top: 30px;
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 100px;
+      }
+    }
+    .signinPanelTitle {
+      color: #8e8e8e;
+      font-size: 17px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .signinFacebookLogin {
+      background-color: #0095f6;
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+      text-align: center;
+      padding: 8px;
+    }
+    .or {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      margin: 15px 40px 18px;
+      .orBorder {
+        height: 1px;
+        background-color: #8e8e8e;
+        flex: 0.3;
+      }
+      div:nth-child(2) {
+        color: #8e8e8e;
+        flex: 0.4;
+        text-align: center;
+        font-size: 13px;
+      }
+    }
+    .textInput {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 0px 8px;
+      margin: 5px 0px;
+      border: 1px solid #8e8e8e;
+      border-radius: 3px;
+      color: #8e8e8e;
+      background-color: #fafafa;
+      &.active label {
+        transform: translateY(0) scale(0.75);
+      }
+
+      label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        transition: 0.4s;
+        transform-origin: top left;
+        transform: translateY(10px) scale(1);
+      }
+      input {
+        transition: 0.4s;
+        font-size: 14px;
+        border: none;
+        outline: none;
+        padding: 14px 0px 2px 0px;
+        &:focus + label {
+          transform: translateY(0) scale(0.75);
+        }
+      }
+    }
+    .signinBt {
+      margin: 15px 0px 0px;
+      button {
+        width: 100%;
+        padding: 5px 10px;
+        background-color: #0095f6;
+        color: white;
+        border: none;
+        &:disabled {
+          opacity: 0.5;
+        }
+      }
+    }
+    .acceptTerm {
+      margin: 10px 0px 30px;
+      color: #8e8e8e;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+  .loginMiniPanel {
+    width: 350px;
+    margin-top: 10px;
+    padding: 22px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid #dbdbdb;
+    font-size: 14px;
+    & span:nth-child(1) {
+      color: black;
+    }
+    & span:nth-child(2) {
+      color: #0095f6;
+    }
+  }
+}

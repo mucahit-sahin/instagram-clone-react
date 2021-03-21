@@ -1,5 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import AppLinks from "../../components/AppLinks/AppLinks";
 import PhoneSlide from "../../components/PhoneSlide/PhoneSlide";
+import TextInput from "../../components/TextInput/TextInput";
 import "./Login.scss";
 const Login = () => {
   return (
@@ -14,16 +17,12 @@ const Login = () => {
             />
           </div>
           <form>
-            <div className="textInput ">
-              <input type="text" id="username" />
-              <label for="username">
-                Telefon, numarası, kullanıcı adı veya e-posta
-              </label>
-            </div>
-            <div className="textInput">
-              <input type="password" id="password" />
-              <label for="password">Password</label>
-            </div>
+            <TextInput
+              id="email"
+              type="text"
+              label="Telefon numarası veya e-posta"
+            />
+            <TextInput id="password" type="password" label="Password" />
             <div className="loginBt">
               <button disabled>Giriş Yap</button>
             </div>
@@ -44,21 +43,16 @@ const Login = () => {
         </div>
         <div className="siginMiniPanel">
           <span>Hesabın yok mu? </span>
-          <span> Kaydol</span>
+          <span>
+            <Link
+              to="/signin"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Kaydol
+            </Link>
+          </span>
         </div>
-        <div className="appLinks">
-          <span>Uygulamayı indir.</span>
-          <div>
-            <img
-              src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_turkish-tr.png/30b29fd697b2.png"
-              alt="Ios Instagram App"
-            />
-            <img
-              src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_turkish-tr.png/9d46177cf153.png"
-              alt="Android Instagram App"
-            />
-          </div>
-        </div>
+        <AppLinks />
       </div>
     </div>
   );

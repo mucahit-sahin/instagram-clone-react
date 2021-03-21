@@ -11,7 +11,7 @@ const PhoneSlide = () => {
   const [slideIndex, setSlideIndex] = React.useState(0);
   React.useEffect(() => {
     setInterval(() => {
-      setSlideIndex((slideIndex + 1) % 4);
+      setSlideIndex((s) => (s + 1) % 4);
     }, 3000);
   }, []);
   return (
