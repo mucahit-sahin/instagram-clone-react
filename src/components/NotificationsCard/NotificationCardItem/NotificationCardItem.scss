@@ -1,0 +1,39 @@
+.notificationCardItem {
+  margin: 10px 12px;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  .notificationCardItemAvatar {
+    flex: 0.1;
+    margin-right: 10px;
+    img {
+      height: 52px;
+      width: 52px;
+      border-radius: 50%;
+    }
+  }
+  .notificationCardItemTitle {
+    flex: 0.8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    span {
+      font-size: 14px;
+      color: #262626;
+      &:nth-child(1) {
+        font-weight: 600;
+      }
+      &:nth-child(3) {
+        color: #8e8e8e;
+      }
+    }
+  }
+  .notificationCardItemLikedphoto {
+    flex: 0.1;
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}

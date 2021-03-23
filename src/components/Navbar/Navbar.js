@@ -12,9 +12,11 @@ import {
   User,
 } from "../../components/icons";
 import NotificationsCard from "../NotificationsCard/NotificationsCard";
+import { act } from "react-dom/test-utils";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [notificationOpen, setNotificationOpen] = React.useState(false);
+  const [activeIcon, setActiveIcon] = React.useState(1);
   const [searchValue, setSearchValue] = React.useState("");
   return (
     <nav>
@@ -34,17 +36,23 @@ const Navbar = () => {
           <label>Search</label>
         </div>
         <div className="navMenu">
-          <Link>
-            <HomeIcon active />
+          <Link onClick={() => setActiveIcon(1)}>
+            <HomeIcon active={activeIcon === 1 && true} />
           </Link>
-          <Link>
-            <Direct />
+          <Link onClick={() => setActiveIcon(2)}>
+            <Direct active={activeIcon === 2 && true} />
           </Link>
-          <Link>
-            <Explore />
+          <Link onClick={() => setActiveIcon(3)}>
+            <Explore active={activeIcon === 3 && true} />
           </Link>
-          <div className="heart" onClick={() => setNotificationOpen(true)}>
-            <Heart />
+          <div
+            className="heart"
+            onClick={() => {
+              setNotificationOpen(true);
+              setActiveIcon(4);
+            }}
+          >
+            <Heart active={notificationOpen && true} />
             {notificationOpen && <NotificationsCard />}
           </div>
           <div

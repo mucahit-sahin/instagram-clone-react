@@ -1,0 +1,92 @@
+.notificationCard {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  right: -15px;
+  background-color: white;
+  box-shadow: 0 0 2px gray;
+  border-radius: 8px;
+  width: 500px;
+  &.arrow-top {
+    margin-top: 10px;
+  }
+
+  &.arrow-top:after {
+    content: " ";
+    position: absolute;
+    right: 20px;
+    top: -10px;
+    border-top: none;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid white;
+  }
+  .followRequests {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    border-bottom: 1px solid #dbdbdb;
+    .followRequestsAvatar {
+      margin: 12px 15px;
+      position: relative;
+      flex: 0.1;
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        &:nth-child(2) {
+          position: absolute;
+          left: 9px;
+          top: 9px;
+        }
+      }
+    }
+    .followRequestsHeader {
+      display: flex;
+      flex-direction: column;
+      flex: 0.8;
+      span {
+        font-size: 14px;
+        &:nth-child(1) {
+          font-weight: 600;
+          color: #262626;
+        }
+        &:nth-child(2) {
+          color: #8e8e8e;
+        }
+      }
+    }
+    .rightArrow {
+      display: flex;
+      flex-direction: row;
+      flex: 0.1;
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+.thisWeek {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #dbdbdb;
+  .thisWeekHeader {
+    margin: 10px 12px 0px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #262626;
+  }
+}
+.earlier {
+  display: flex;
+  flex-direction: column;
+  .earlierHeader {
+    margin: 10px 12px 0px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #262626;
+  }
+}
