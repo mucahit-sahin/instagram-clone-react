@@ -1,22 +1,28 @@
 import React from "react";
 import { Comment, Direct, Heart, More, Saved, Smile } from "../icons";
 import "./Post.scss";
-const Post = () => {
+const Post = ({
+  userImage,
+  username,
+  displayName,
+  postImage,
+  postDescription,
+}) => {
   return (
     <div className="post">
       <header className="postHeader">
         <div className="postUserImage">
-          <img src="https://picsum.photos/200" alt="userimage" />
+          <img src={userImage} alt="userimage" />
         </div>
         <div className="postUsername">
-          <span>Mucahitsah</span>
+          <span>{username}</span>
         </div>
         <div className="headerMore">
           <More />
         </div>
       </header>
       <div className="postImage">
-        <img src="https://picsum.photos/500" alt="Postimage" />
+        <img src={postImage} alt="Postimage" />
       </div>
       <div className="postContent">
         <div className="postActions">
@@ -39,8 +45,8 @@ const Post = () => {
           <span>&nbsp;others</span>
         </div>
         <div className="postDescription">
-          <span>mucahitsah</span>&nbsp;
-          <span>güzel bir gün</span>
+          <span>{username}</span>&nbsp;
+          <span>{postDescription}</span>
         </div>
         <div className="postComments">
           <span className="postCommentsMoreCount">View all 4 comments</span>

@@ -1,0 +1,36 @@
+.suggestionUsersItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 8px 0px;
+  .suggestionUsersItemAvatar {
+    margin-right: 10px;
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+  .suggestionUsersItemName {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-size: 14px;
+      color: #262626;
+      font-weight: 600;
+      &:last-child {
+        font-size: 12px;
+        color: #8e8e8e;
+      }
+    }
+  }
+
+  button {
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    color: #0095f6;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
