@@ -1,0 +1,124 @@
+nav {
+  background-color: white;
+  width: 100%;
+  padding: 10px 0px;
+  border-bottom: 1px solid #dbdbdb;
+  .navbar {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    max-width: 975px;
+    margin: 0px auto;
+    .navLogo {
+      flex: 0.4;
+    }
+    .navSearchInput {
+      flex: 0.2;
+      position: relative;
+      background-color: #fafafa;
+      &.labelHide {
+        label {
+          display: none;
+        }
+      }
+      label {
+        position: absolute;
+        top: 0px;
+        padding: 3px;
+        left: 40%;
+        font-size: 14px;
+        color: #dbdbdb;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: transparent;
+      }
+      input {
+        width: 100%;
+        padding: 3px;
+        font-size: 14px;
+        border: 1px solid #dbdbdb;
+        outline: none;
+        background-color: transparent;
+        &:focus + label {
+          left: 0;
+        }
+      }
+    }
+    .navMenu {
+      flex: 0.4;
+      display: flex;
+      justify-content: flex-end;
+      svg {
+        margin-left: 22px;
+      }
+      .heart {
+        position: relative;
+      }
+      .closePanel {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 99;
+        background-color: transparent;
+        &.active {
+          display: block;
+        }
+      }
+      .navProfilePhoto {
+        position: relative;
+        img {
+          margin-left: 22px;
+          border-radius: 50%;
+          width: 22px;
+          height: 22px;
+        }
+        .navProfilPhotoMenu {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          z-index: 100;
+          top: 100%;
+          right: -15px;
+          background-color: white;
+          box-shadow: 0 0 2px gray;
+          border-radius: 8px;
+          width: 230px;
+          &.arrow-top {
+            margin-top: 10px;
+          }
+
+          &.arrow-top:after {
+            content: " ";
+            position: absolute;
+            right: 20px;
+            top: -10px;
+            border-top: none;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+            border-bottom: 10px solid white;
+          }
+          div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            &:hover {
+              background-color: #efefef;
+            }
+            svg {
+              margin: 10px 15px;
+              fill: black;
+            }
+            &:last-child {
+              padding: 5px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
