@@ -12,7 +12,6 @@ import {
   User,
 } from "../../components/icons";
 import NotificationsCard from "../NotificationsCard/NotificationsCard";
-import { act } from "react-dom/test-utils";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [notificationOpen, setNotificationOpen] = React.useState(false);

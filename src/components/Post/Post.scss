@@ -1,0 +1,128 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 615px;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  margin-bottom: 40px;
+  .postHeader {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    .postUserImage {
+      margin: 10px;
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+    }
+    .postUsername {
+      flex: 1;
+      span {
+        font-size: 14px;
+        font-weight: 600;
+        color: #262626;
+      }
+    }
+    .headerMore {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 10px;
+    }
+  }
+  .postImage {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .postContent {
+    display: flex;
+    flex-direction: column;
+    .postActions {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: 0px 10px;
+      div {
+        padding: 8px;
+        &:nth-child(4) {
+          margin-left: auto;
+          margin-right: 10px;
+        }
+      }
+    }
+    .postRecentLiked {
+      font-size: 14px;
+      color: #262626;
+      margin: 0px 15px;
+      span {
+        font-weight: 600;
+      }
+    }
+    .postDescription {
+      margin: 0px 15px;
+      span {
+        font-size: 14px;
+        color: #262626;
+        &:nth-child(1) {
+          font-weight: 600;
+        }
+      }
+    }
+    .postComments {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 15px;
+      .postCommentsMoreCount {
+        font-size: 16px;
+        color: #8e8e8e;
+      }
+      .postComment {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        span {
+          color: #262626;
+          &:nth-child(1) {
+            font-weight: 600;
+          }
+        }
+        svg {
+          height: 12px;
+          width: 12px;
+          margin-left: auto;
+        }
+      }
+    }
+    .postDate {
+      margin: 0px 15px;
+      span {
+        color: #8e8e8e;
+        font-size: 10px;
+      }
+    }
+    .postCommentInput {
+      margin: 5px 15px;
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      svg {
+        margin-right: 15px;
+      }
+      input {
+        flex: 1;
+        outline: none;
+        border: none;
+      }
+      button {
+        background-color: transparent;
+        color: #0f9bf7;
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}

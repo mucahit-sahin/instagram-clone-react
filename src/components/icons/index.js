@@ -7,3 +7,6 @@ export { default as Change } from "./Change";
 export { default as Saved } from "./Saved";
 export { default as Settings } from "./Settings";
 export { default as Arrow } from "./Arrow";
+export { default as More } from "./More";
+export { default as Comment } from "./Comment";
+export { default as Smile } from "./Smile";

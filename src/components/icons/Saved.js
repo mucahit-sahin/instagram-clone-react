@@ -3,15 +3,18 @@ import * as React from "react";
 function Saved(props) {
   return (
     <svg
-      aria-label="Kaydedildi"
+      aria-label="Save"
       className="prefix___8-yf5"
       fill="#262626"
-      height={16}
-      viewBox="0 0 32 32"
-      width={16}
+      height={24}
+      viewBox="0 0 48 48"
+      width={24}
+      data-selected="true"
+      data-label-id={0}
+      data-metatip="true"
       {...props}
     >
-      <path d="M28.7 32c-.4 0-.8-.2-1.1-.4L16 19.9 4.4 31.6c-.4.4-1.1.6-1.6.3-.6-.2-.9-.8-.9-1.4v-29C1.8.7 2.5 0 3.3 0h25.4c.8 0 1.5.7 1.5 1.5v29c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM4.8 3v23.9l9.4-9.4c.9-.9 2.6-.9 3.5 0l9.4 9.4V3H4.8z" />
+      <path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z" />
     </svg>
   );
 }
