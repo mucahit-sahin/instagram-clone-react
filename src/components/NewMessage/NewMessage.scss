@@ -1,0 +1,32 @@
+.newMessage {
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  svg {
+    height: 96px;
+    width: 96px;
+  }
+  span {
+    &:nth-child(2) {
+      margin-top: 12px;
+      font-size: 22px;
+      font-weight: 300;
+    }
+    &:nth-child(3) {
+      margin-top: 4px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+  button {
+    margin-top: 25px;
+    background-color: #0095f6;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+}

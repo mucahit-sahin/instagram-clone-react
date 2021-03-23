@@ -35,10 +35,10 @@ const Navbar = () => {
           <label>Search</label>
         </div>
         <div className="navMenu">
-          <Link onClick={() => setActiveIcon(1)}>
+          <Link to="/home" onClick={() => setActiveIcon(1)}>
             <HomeIcon active={activeIcon === 1 && true} />
           </Link>
-          <Link onClick={() => setActiveIcon(2)}>
+          <Link to="/direct" onClick={() => setActiveIcon(2)}>
             <Direct active={activeIcon === 2 && true} />
           </Link>
           <Link onClick={() => setActiveIcon(3)}>

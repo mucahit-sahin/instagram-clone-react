@@ -1,0 +1,27 @@
+.lastMessagesItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &:hover {
+    background-color: #fafafa;
+  }
+  .lastMessagesItemAvatar {
+    margin: 8px 10px 8px 20px;
+    img {
+      height: 56px;
+      width: 56px;
+      border-radius: 50%;
+    }
+  }
+  .lastMessagesItemName {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-size: 14px;
+      color: #262626;
+      &:last-child {
+        color: #8e8e8e;
+      }
+    }
+  }
+}

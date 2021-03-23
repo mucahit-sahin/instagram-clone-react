@@ -1,0 +1,14 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  background-color: #fafafa;
+  .content {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+  }
+}
