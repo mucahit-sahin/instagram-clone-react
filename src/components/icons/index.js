@@ -10,3 +10,5 @@ export { default as Arrow } from "./Arrow";
 export { default as More } from "./More";
 export { default as Comment } from "./Comment";
 export { default as Smile } from "./Smile";
+export { default as Info } from "./Info";
+export { default as Photo } from "./Photo";

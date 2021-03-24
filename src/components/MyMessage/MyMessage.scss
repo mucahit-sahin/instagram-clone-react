@@ -1,0 +1,21 @@
+.myMessageItem {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  &:hover svg {
+    display: block;
+  }
+  svg {
+    display: none;
+    margin-right: 10px;
+  }
+  .myMessage {
+    border: 1px solid #dbdbdb;
+    padding: 12px 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+}

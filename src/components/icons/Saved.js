@@ -6,9 +6,9 @@ function Saved(props) {
       aria-label="Save"
       className="prefix___8-yf5"
       fill="#262626"
-      height={24}
+      height={16}
       viewBox="0 0 48 48"
-      width={24}
+      width={16}
       data-selected="true"
       data-label-id={0}
       data-metatip="true"
