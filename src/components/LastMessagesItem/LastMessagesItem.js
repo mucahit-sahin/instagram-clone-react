@@ -1,8 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LastMessagesItem.scss";
 const LastMessagesItem = ({ userImage, username, lastMessage }) => {
   return (
-    <div className="lastMessagesItem">
+    <Link
+      to={`/direct/${username}`}
+      className="lastMessagesItem"
+      style={{ textDecoration: "none" }}
+    >
       <div className="lastMessagesItemAvatar">
         <img src={userImage} alt="profilePhoto" />
       </div>
@@ -10,7 +15,7 @@ const LastMessagesItem = ({ userImage, username, lastMessage }) => {
         <span>{username}</span>
         <span>{lastMessage}</span>
       </div>
-    </div>
+    </Link>
   );
 };
 

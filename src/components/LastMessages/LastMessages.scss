@@ -1,0 +1,28 @@
+.lastMessagesCol {
+  flex: 0.3;
+  border: 1px solid #dbdbdb;
+  .lastMessagesHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 0px 18px;
+    border-bottom: 1px solid #dbdbdb;
+    span {
+      font-size: 18px;
+      font-weight: 600;
+      color: #262626;
+    }
+    svg {
+      transform: rotate(180deg);
+      fill: #262626;
+      font-size: 18px;
+    }
+  }
+  .lastMessages {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: scroll;
+  }
+}
