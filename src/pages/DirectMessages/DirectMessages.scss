@@ -1,4 +1,4 @@
-.direct {
+.directMessages {
   max-width: 975px;
   max-height: 600px;
   margin: 20px auto 0px;
@@ -8,12 +8,12 @@
   background-color: white;
   .lastMessagesCol {
     @media (min-width: 0px) and (max-width: 500px) {
-      flex: 1;
+      display: none;
     }
   }
-  .newMessage {
+  .chat {
     @media (min-width: 0px) and (max-width: 500px) {
-      display: none;
+      flex: 1;
     }
   }
 }

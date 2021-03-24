@@ -1,17 +1,17 @@
 import React from "react";
-import NewMessage from "../../components/NewMessage/NewMessage";
+import Chat from "../../components/Chat/Chat";
 import HomeBox from "../../components/HomeBox/HomeBox";
-import "./Direct.scss";
 import LastMessages from "../../components/LastMessages/LastMessages";
-const Direct = () => {
+import "./DirectMessages.scss";
+const DirectMessages = () => {
   return (
     <HomeBox>
-      <div className="direct">
+      <div className="directMessages">
         <LastMessages />
-        <NewMessage />
+        <Chat />
       </div>
     </HomeBox>
   );
 };
 
-export default Direct;
+export default DirectMessages;
