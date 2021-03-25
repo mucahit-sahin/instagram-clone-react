@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   Change,
   Direct,
@@ -13,10 +13,16 @@ import {
 } from "../../components/icons";
 import NotificationsCard from "../NotificationsCard/NotificationsCard";
 const Navbar = () => {
+  let path = useLocation().pathname;
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [notificationOpen, setNotificationOpen] = React.useState(false);
   const [activeIcon, setActiveIcon] = React.useState(1);
   const [searchValue, setSearchValue] = React.useState("");
+  React.useEffect(() => {
+    if (path === "/home") setActiveIcon(1);
+    else if (path === "/direct" || path.split("/")[1] === "direct")
+      setActiveIcon(2);
+  }, []);
   return (
     <nav>
       <div className="navbar">
@@ -28,11 +34,12 @@ const Navbar = () => {
         </div>
         <div className={`navSearchInput ${searchValue !== "" && "labelHide"}`}>
           <input
+            id="searchInput"
             type="text"
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
           />
-          <label>Search</label>
+          <label for="searchInput">Search</label>
         </div>
         <div className="navMenu">
           <Link to="/home" onClick={() => setActiveIcon(1)}>

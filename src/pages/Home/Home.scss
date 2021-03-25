@@ -1,23 +1,26 @@
-.feed {
-  max-width: 975px;
-  margin: 0px auto;
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  .posts {
-    flex: 0.6;
+body {
+  overflow-y: scroll;
+  .feed {
+    max-width: 975px;
+    margin: 0px auto;
     display: flex;
-    flex-direction: column;
-    @media (min-width: 0) and (max-width: 500px) {
-      flex: 1;
+    flex-direction: row;
+    flex: 1;
+    .posts {
+      flex: 0.6;
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 0) and (max-width: 500px) {
+        flex: 1;
+      }
     }
-  }
-  .widgets {
-    flex: 0.4;
-    display: flex;
-    flex-direction: column;
-    @media (min-width: 0) and (max-width: 500px) {
-      display: none;
+    .widgets {
+      flex: 0.4;
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 0) and (max-width: 500px) {
+        display: none;
+      }
     }
   }
 }

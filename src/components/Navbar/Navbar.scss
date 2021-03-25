@@ -1,5 +1,6 @@
 nav {
   position: sticky;
+  z-index: 1000;
   top: 0px;
   background-color: white;
   width: 100%;
@@ -35,6 +36,9 @@ nav {
         flex-direction: row;
         align-items: center;
         background-color: transparent;
+        @media (min-width: 0px) and (max-width: 500px) {
+          display: none;
+        }
       }
       input {
         width: 100%;
@@ -45,6 +49,9 @@ nav {
         background-color: transparent;
         &:focus + label {
           left: 0;
+        }
+        @media (min-width: 0px) and (max-width: 500px) {
+          display: none;
         }
       }
     }

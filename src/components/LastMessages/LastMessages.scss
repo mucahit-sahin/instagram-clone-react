@@ -20,9 +20,9 @@
     }
   }
   .lastMessages {
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    flex: 1;
-    overflow-y: scroll;
+    height: 90%;
   }
 }

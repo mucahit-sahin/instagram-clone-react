@@ -1,20 +1,25 @@
-.chatInput {
-  display: flex;
-  flex-direction: row;
-  margin: 10px 20px;
-  padding: 10px 8px;
-  border: 1px solid #dbdbdb;
-  border-radius: 30px;
+.chatInputRow {
+  position: sticky;
+  bottom: 0px;
+  left: 0px;
   background-color: white;
-  input {
-    margin-left: 10px;
-    flex: 1;
-    border: none;
-    outline: none;
-  }
-  svg {
-    &:last-child {
+  .chatInput {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 20px;
+    padding: 10px 8px;
+    border: 1px solid #dbdbdb;
+    border-radius: 30px;
+    input {
       margin-left: 10px;
+      flex: 1;
+      border: none;
+      outline: none;
+    }
+    svg {
+      &:last-child {
+        margin-left: 10px;
+      }
     }
   }
 }

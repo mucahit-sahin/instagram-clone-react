@@ -1,19 +1,25 @@
-.direct {
-  max-width: 975px;
-  max-height: 600px;
-  margin: 20px auto 0px;
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  background-color: white;
-  .lastMessagesCol {
+body {
+  overflow-y: hidden;
+  .direct {
+    max-width: 975px;
+    max-height: 600px;
+    margin: 20px auto 0px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: white;
     @media (min-width: 0px) and (max-width: 500px) {
-      flex: 1;
+      margin: 0px auto;
     }
-  }
-  .newMessage {
-    @media (min-width: 0px) and (max-width: 500px) {
-      display: none;
+    .lastMessagesCol {
+      @media (min-width: 0px) and (max-width: 500px) {
+        flex: 1;
+      }
+    }
+    .newMessage {
+      @media (min-width: 0px) and (max-width: 500px) {
+        display: none;
+      }
     }
   }
 }
