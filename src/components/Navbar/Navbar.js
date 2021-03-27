@@ -22,6 +22,7 @@ const Navbar = () => {
     if (path === "/home") setActiveIcon(1);
     else if (path === "/direct" || path.split("/")[1] === "direct")
       setActiveIcon(2);
+    else if (path === "/explore") setActiveIcon(3);
   }, []);
   return (
     <nav>
@@ -48,7 +49,7 @@ const Navbar = () => {
           <Link to="/direct" onClick={() => setActiveIcon(2)}>
             <Direct active={activeIcon === 2 && true} />
           </Link>
-          <Link onClick={() => setActiveIcon(3)}>
+          <Link to="/explore" onClick={() => setActiveIcon(3)}>
             <Explore active={activeIcon === 3 && true} />
           </Link>
           <div

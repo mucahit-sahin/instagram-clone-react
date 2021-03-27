@@ -1,0 +1,19 @@
+.exploreRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  margin-bottom: 30px;
+  @media (max-width: 700px) {
+    grid-column-gap: 5px;
+    margin-bottom: 5px;
+  }
+  .exploreItem {
+    display: flex;
+    &:last-child {
+      margin: 0px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

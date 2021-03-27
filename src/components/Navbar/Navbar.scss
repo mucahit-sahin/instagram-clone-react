@@ -29,7 +29,9 @@ nav {
         position: absolute;
         top: 0px;
         padding: 3px;
-        left: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s;
         font-size: 14px;
         color: #dbdbdb;
         display: flex;
@@ -49,6 +51,7 @@ nav {
         background-color: transparent;
         &:focus + label {
           left: 0;
+          transform: translateX(0);
         }
         @media (min-width: 0px) and (max-width: 500px) {
           display: none;

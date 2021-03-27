@@ -1,0 +1,33 @@
+.exploreBigRowCards {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 30px;
+  margin-bottom: 30px;
+  @media (max-width: 700px) {
+    grid-column-gap: 5px;
+    margin-bottom: 5px;
+  }
+  .exploreSmallCards {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 30px;
+    @media (max-width: 700px) {
+      grid-row-gap: 5px;
+    }
+    .exploreSmallItem {
+      display: flex;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .exploreBigCard {
+    display: flex;
+    .exploreBigCardItem {
+      display: flex;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
