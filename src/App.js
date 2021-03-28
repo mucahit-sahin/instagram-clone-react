@@ -1,7 +1,6 @@
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Direct from "./pages/Direct/Direct";
-import DirectMessages from "./pages/DirectMessages/DirectMessages";
 import Explore from "./pages/Explore/Explore";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
@@ -14,7 +13,7 @@ function App() {
       <Route path="/signin" component={Signin} />
       <Route path="/home" component={Home} />
       <Route exact path="/direct" component={Direct} />
-      <Route exact path="/direct/:id" component={DirectMessages} />
+      <Route exact path="/direct/:id" component={Direct} />
       <Route exact path="/explore" component={Explore} />
     </Switch>
   );

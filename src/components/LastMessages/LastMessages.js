@@ -1,60 +1,30 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router";
 import { Arrow } from "../icons";
 import LastMessagesItem from "../LastMessagesItem/LastMessagesItem";
 import "./LastMessages.scss";
-const LastMessages = () => {
+const LastMessages = ({ messages, users }) => {
+  let { id } = useParams();
   return (
-    <div className="lastMessagesCol">
+    <div className={`lastMessagesCol ${id && "hide"}`}>
       <div className="lastMessagesHeader">
         <span>mucahitsah</span>
         <Arrow />
       </div>
       <div className="lastMessages">
-        <LastMessagesItem
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          username="cnecati"
-          lastMessage="güle güle"
-        />
-        <LastMessagesItem
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          username="cnecati"
-          lastMessage="güle güle"
-        />
-        <LastMessagesItem
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          username="cnecati"
-          lastMessage="güle güle"
-        />
-        <LastMessagesItem
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          username="cnecati"
-          lastMessage="güle güle"
-        />
-        <LastMessagesItem
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          username="cnecati"
-          lastMessage="güle güle"
-        />
-        <LastMessagesItem
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          username="cnecati"
-          lastMessage="güle güle"
-        />
-        <LastMessagesItem
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          username="cnecati"
-          lastMessage="güle güle"
-        />
-        <LastMessagesItem
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          username="cnecati"
-          lastMessage="güle güle"
-        />
-        <LastMessagesItem
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          username="cnecati"
-          lastMessage="son"
-        />
+        {messages.map((message) => {
+          const user = users.find((user) => user.username === message.to);
+          if (user) {
+            return (
+              <LastMessagesItem
+                username={user.username}
+                userImage={user.userimage}
+                lastMessage={message.messages.slice(-1)[0].message}
+              />
+            );
+          }
+        })}
       </div>
     </div>
   );

@@ -3,12 +3,18 @@ import NewMessage from "../../components/NewMessage/NewMessage";
 import HomeBox from "../../components/HomeBox/HomeBox";
 import "./Direct.scss";
 import LastMessages from "../../components/LastMessages/LastMessages";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router";
+import Chat from "../../components/Chat/Chat";
 const Direct = () => {
+  let { id } = useParams();
+  const [messages] = React.useState(useSelector((state) => state.messages));
+  const [users] = React.useState(useSelector((state) => state.users));
   return (
     <HomeBox>
       <div className="direct">
-        <LastMessages />
-        <NewMessage />
+        <LastMessages messages={messages} users={users} />
+        {id ? <Chat messages={messages} users={users} /> : <NewMessage />}
       </div>
     </HomeBox>
   );

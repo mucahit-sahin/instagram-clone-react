@@ -6,6 +6,9 @@ body {
     flex-direction: column;
     border: 1px solid #dbdbdb;
     position: relative;
+    @media (min-width: 0px) and (max-width: 500px) {
+      flex: 1;
+    }
     .chatHeader {
       position: sticky;
       top: 0px;
@@ -34,7 +37,7 @@ body {
     .chatMessages {
       display: flex;
       flex: 1;
-      flex-direction: column-reverse;
+      flex-direction: column;
       overflow-y: scroll;
     }
   }

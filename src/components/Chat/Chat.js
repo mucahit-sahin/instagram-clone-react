@@ -1,55 +1,52 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router";
 import ChatInputs from "../ChatInputs/ChatInputs";
 import FromMessage from "../FromMessage/FromMessage";
 import { Info } from "../icons";
 import MyMessage from "../MyMessage/MyMessage";
 import "./Chat.scss";
-const Chat = () => {
+
+const Chat = ({ messages, users }) => {
+  let { id } = useParams();
+  const [messagesData, setMessagesData] = React.useState();
+  const [user, setUser] = React.useState();
   React.useEffect(() => {
     var element = document.querySelector(".chatMessages");
     element.scrollTop = element.scrollHeight;
   }, []);
 
+  React.useEffect(() => {
+    setMessagesData(messages.find((message) => message.to === id));
+    setUser(users.find((user) => user.username === id));
+  }, [id]);
   return (
     <div className="chat">
       <div className="chatHeader">
         <div className="chatHeaderAvatar">
-          <img
-            src="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-            alt="chatHeaderAvatar"
-          />
+          <img src={user && user.userimage} alt="chatHeaderAvatar" />
         </div>
         <div className="chatHeaderUsername">
-          <span>cnecati</span>
+          <span>{user && user.username}</span>
         </div>
         <Info />
       </div>
       <div className="chatMessages">
-        <FromMessage
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          message="merhabaa"
-        />
-        <FromMessage
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          message="merhabaa"
-        />
-        <FromMessage
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          message="merhabaa"
-        />
-        <MyMessage message="selam" />
-        <FromMessage
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          message="merhabaa"
-        />
-        <MyMessage message="selam" />
-        <FromMessage
-          userImage="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=lb1Iq3iWIs0AX83dxNi&ccb=7-4&oh=5661ed1c3e9fca8b7a128cf2b1f280e0&oe=60858893&_nc_sid=7bff83"
-          message="merhabaa"
-        />
-        <MyMessage message="selam" />
+        {messagesData &&
+          messagesData.messages.map((message) => {
+            if (message.from === user.username) {
+              return (
+                <FromMessage
+                  userImage={user.userimage}
+                  message={message.message}
+                />
+              );
+            } else {
+              return <MyMessage message={message.message} />;
+            }
+          })}
       </div>
-      <ChatInputs />
+      <ChatInputs to={user && user.username} />
     </div>
   );
 };

@@ -1,6 +1,11 @@
 .lastMessagesCol {
   flex: 0.3;
   border: 1px solid #dbdbdb;
+  &.hide {
+    @media (min-width: 0px) and (max-width: 500px) {
+      display: none;
+    }
+  }
   .lastMessagesHeader {
     display: flex;
     flex-direction: row;
