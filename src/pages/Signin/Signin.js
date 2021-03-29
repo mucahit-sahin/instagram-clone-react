@@ -1,9 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import AppLinks from "../../components/AppLinks/AppLinks";
-import TextInput from "../../components/TextInput/TextInput";
 import "./Signin.scss";
 const Signin = () => {
+  const loginBt = React.useRef();
+  let history = useHistory();
+  const [email, setEmail] = React.useState("");
+  const [displayName, setDisplayName] = React.useState("");
+  const [username, setUsername] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  React.useEffect(() => {
+    if (
+      email !== "" &&
+      password !== "" &&
+      username !== "" &&
+      displayName !== ""
+    ) {
+      loginBt.current.disabled = false;
+    } else {
+      loginBt.current.disabled = true;
+    }
+  }, [email, password]);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    history.push("/home");
+  };
+
   return (
     <div className="signin">
       <div className="signinPanel">
@@ -28,17 +51,47 @@ const Signin = () => {
           </div>
           <div className="orBorder"></div>
         </div>
-        <form>
-          <TextInput
-            id="email"
-            type="text"
-            label="Telefon numarası veya e-posta"
-          />
-          <TextInput id="displayName" type="text" label="Adı ve Soyadı" />
-          <TextInput id="username" type="text" label="Username" />
-          <TextInput id="password" type="password" label="Password" />
+        <form onSubmit={(e) => onSubmit(e)}>
+          <div className={`textInput ${email.length > 0 && "active"}`}>
+            <input
+              id="email"
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <label for="email">Telefon numarası veya e-posta</label>
+          </div>
+          <div className={`textInput ${displayName.length > 0 && "active"}`}>
+            <input
+              id="displayName"
+              type="text"
+              value={displayName}
+              onChange={(e) => setDisplayName(e.target.value)}
+            />
+            <label for="displayName">Adı ve Soyadı</label>
+          </div>
+          <div className={`textInput ${username.length > 0 && "active"}`}>
+            <input
+              id="username"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <label for="username">Username</label>
+          </div>
+          <div className={`textInput ${password.length > 0 && "active"}`}>
+            <input
+              id="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <label for="password">Password</label>
+          </div>
           <div className="signinBt">
-            <button disabled>Giriş Yap</button>
+            <button ref={loginBt} disabled>
+              Üye Ol
+            </button>
           </div>
         </form>
         <div className="acceptTerm">

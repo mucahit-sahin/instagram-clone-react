@@ -1,10 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import AppLinks from "../../components/AppLinks/AppLinks";
 import PhoneSlide from "../../components/PhoneSlide/PhoneSlide";
-import TextInput from "../../components/TextInput/TextInput";
 import "./Login.scss";
+
 const Login = () => {
+  let history = useHistory();
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const loginBt = React.useRef();
+  React.useEffect(() => {
+    if (email !== "" && password !== "") {
+      loginBt.current.disabled = false;
+    } else {
+      loginBt.current.disabled = true;
+    }
+  }, [email, password]);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    history.push("/home");
+  };
   return (
     <div className="login">
       <PhoneSlide />
@@ -16,15 +32,29 @@ const Login = () => {
               alt="instagramLogo"
             />
           </div>
-          <form>
-            <TextInput
-              id="email"
-              type="text"
-              label="Telefon numarası veya e-posta"
-            />
-            <TextInput id="password" type="password" label="Password" />
+          <form onSubmit={(e) => onSubmit(e)}>
+            <div className={`textInput ${email.length > 0 && "active"}`}>
+              <input
+                id="email"
+                type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <label for="email">Telefon numarası veya e-posta</label>
+            </div>
+            <div className={`textInput ${password.length > 0 && "active"}`}>
+              <input
+                id="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <label for="password">Password</label>
+            </div>
             <div className="loginBt">
-              <button disabled>Giriş Yap</button>
+              <button ref={loginBt} disabled>
+                Giriş Yap
+              </button>
             </div>
           </form>
           <div className="or">
