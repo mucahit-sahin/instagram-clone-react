@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.scss";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import {
   Change,
   Direct,
@@ -14,6 +14,7 @@ import {
 import NotificationsCard from "../NotificationsCard/NotificationsCard";
 const Navbar = () => {
   let path = useLocation().pathname;
+  let history = useHistory();
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [notificationOpen, setNotificationOpen] = React.useState(false);
   const [activeIcon, setActiveIcon] = React.useState(1);
@@ -39,6 +40,9 @@ const Navbar = () => {
             type="text"
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
+            onKeyPress={(e) =>
+              e.key === "Enter" && history.push("/" + searchValue)
+            }
           />
           <label for="searchInput">Search</label>
         </div>
