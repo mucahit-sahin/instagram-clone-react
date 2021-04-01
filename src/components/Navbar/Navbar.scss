@@ -85,9 +85,11 @@ nav {
         position: relative;
         img {
           margin-left: 22px;
+          width: 28px;
+          height: 28px;
           border-radius: 50%;
-          width: 22px;
-          height: 22px;
+          padding: 3px;
+          border: 1px solid;
         }
         .navProfilPhotoMenu {
           display: flex;
@@ -114,7 +116,7 @@ nav {
             border-left: 10px solid transparent;
             border-bottom: 10px solid white;
           }
-          div {
+          .menuItem {
             display: flex;
             flex-direction: row;
             align-items: center;

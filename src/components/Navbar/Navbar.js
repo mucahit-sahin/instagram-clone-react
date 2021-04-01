@@ -79,23 +79,27 @@ const Navbar = () => {
             {menuOpen && (
               <>
                 <div className="navProfilPhotoMenu arrow-top">
-                  <div>
+                  <Link
+                    className="menuItem"
+                    to="/mucahitsah"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
                     <User />
                     <span>Profil</span>
-                  </div>
-                  <div>
+                  </Link>
+                  <div className="menuItem">
                     <Saved />
                     <span>Kaydedildi</span>
                   </div>
-                  <div>
+                  <div className="menuItem">
                     <Settings />
                     <span>Ayarlar</span>
                   </div>
-                  <div>
+                  <div className="menuItem">
                     <Change />
                     <span>Hesap Değiştir</span>
                   </div>
-                  <div>
+                  <div className="menuItem">
                     <span>Çıkış Yap</span>
                   </div>
                 </div>

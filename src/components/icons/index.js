@@ -12,3 +12,6 @@ export { default as Comment } from "./Comment";
 export { default as Smile } from "./Smile";
 export { default as Info } from "./Info";
 export { default as Photo } from "./Photo";
+export { default as Posts } from "./Posts";
+export { default as Igtv } from "./Igtv";
+export { default as Tagged } from "./Tagged";

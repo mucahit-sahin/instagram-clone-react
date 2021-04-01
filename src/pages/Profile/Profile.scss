@@ -1,0 +1,111 @@
+.profile {
+  max-width: 975px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  .profileHeaderRow {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    .profilePhotoCol {
+      flex: 0.2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        border-radius: 50%;
+        width: 80%;
+      }
+    }
+    .profileContentCol {
+      flex: 0.8;
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+      .title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .username {
+          font-size: 28px;
+          font-weight: 300;
+          color: #262626;
+          margin-right: 20px;
+        }
+        .editProfile {
+          font-size: 14px;
+          color: #262626;
+          font-weight: 500;
+          padding: 5px 9px;
+          border-radius: 10px;
+          border: 1px solid #e3e3e3;
+          margin-right: 10px;
+        }
+        .settings {
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+      .counter {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        color: #262626;
+        div {
+          margin-right: 40px;
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+      .biographyRow {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        color: #262626;
+        .displayName {
+          font-weight: 600;
+        }
+        .biography {
+          //
+        }
+      }
+    }
+  }
+  .profileTabs {
+    width: min-content;
+    margin: 40px auto 0px;
+    display: flex;
+    flex-direction: row;
+    .tabItem {
+      display: flex;
+      align-items: center;
+      padding: 17px 0px;
+      color: #8e8e8e;
+      font-weight: 600;
+      line-height: 0px;
+      &:hover {
+        cursor: pointer;
+      }
+      svg {
+        margin-right: 5px;
+        width: 12px;
+        fill: #8e8e8e;
+      }
+      &.active {
+        border-top: 1px solid #262626;
+        color: #262626;
+        svg {
+          width: 12px;
+          fill: #262626;
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+  }
+}
