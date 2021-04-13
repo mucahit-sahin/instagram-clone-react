@@ -8,8 +8,8 @@ import { useParams } from "react-router";
 import Chat from "../../components/Chat/Chat";
 const Direct = () => {
   let { id } = useParams();
-  const [messages] = React.useState(useSelector((state) => state.messages));
-  const [users] = React.useState(useSelector((state) => state.users));
+  let messages = useSelector((state) => state.messages);
+  let users = useSelector((state) => state.users);
   return (
     <HomeBox>
       <div className="direct">

@@ -56,7 +56,7 @@ const Navbar = () => {
           <Link to="/explore" onClick={() => setActiveIcon(3)}>
             <Explore active={activeIcon === 3 && true} />
           </Link>
-          <div
+          <Link
             className="heart"
             onClick={() => {
               setNotificationOpen(true);
@@ -65,7 +65,7 @@ const Navbar = () => {
           >
             <Heart active={notificationOpen && true} />
             {notificationOpen && <NotificationsCard />}
-          </div>
+          </Link>
           <div
             className={`closePanel ${
               menuOpen || notificationOpen ? "active" : ""

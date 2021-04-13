@@ -15,6 +15,7 @@ nav {
     margin: 0px auto;
     .navLogo {
       flex: 0.4;
+      margin-left: 10px;
     }
     .navSearchInput {
       flex: 0.2;
@@ -62,11 +63,18 @@ nav {
       flex: 0.4;
       display: flex;
       justify-content: flex-end;
+      a {
+        display: flex;
+        align-items: center;
+      }
       svg {
         margin-left: 22px;
       }
       .heart {
         position: relative;
+        @media (max-width: 500px) {
+          display: none;
+        }
       }
       .closePanel {
         display: none;
@@ -83,6 +91,8 @@ nav {
       }
       .navProfilePhoto {
         position: relative;
+        display: flex;
+        align-items: center;
         img {
           margin-left: 22px;
           width: 28px;
