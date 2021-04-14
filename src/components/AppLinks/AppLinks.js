@@ -3,7 +3,7 @@ import "./AppLinks.scss";
 const AppLinks = () => {
   return (
     <div className="appLinks">
-      <span>Uygulamayı indir.</span>
+      <span>Get the app.</span>
       <div>
         <img
           src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_turkish-tr.png/30b29fd697b2.png"

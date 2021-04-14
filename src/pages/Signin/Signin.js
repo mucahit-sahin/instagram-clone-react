@@ -37,17 +37,15 @@ const Signin = () => {
           />
         </div>
         <div className="signinPanelTitle">
-          <span>
-            Arkadaşlarının fotoğraf ve videolarını görmek için kaydol.
-          </span>
+          <span>Sign up to see photos and videos from your friends.</span>
         </div>
         <div className="signinFacebookLogin">
-          <span>Facebook ile Giriş Yap</span>
+          <span>Log in with Facebook</span>
         </div>
         <div className="or">
           <div className="orBorder"></div>
           <div>
-            <span>YA DA</span>
+            <span>OR</span>
           </div>
           <div className="orBorder"></div>
         </div>
@@ -59,7 +57,7 @@ const Signin = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label for="email">Telefon numarası veya e-posta</label>
+            <label for="email">Mobile Number or Email</label>
           </div>
           <div className={`textInput ${displayName.length > 0 && "active"}`}>
             <input
@@ -68,7 +66,7 @@ const Signin = () => {
               value={displayName}
               onChange={(e) => setDisplayName(e.target.value)}
             />
-            <label for="displayName">Adı ve Soyadı</label>
+            <label for="displayName">Full Name</label>
           </div>
           <div className={`textInput ${username.length > 0 && "active"}`}>
             <input
@@ -90,23 +88,23 @@ const Signin = () => {
           </div>
           <div className="signinBt">
             <button ref={loginBt} disabled>
-              Üye Ol
+              Sign up
             </button>
           </div>
         </form>
         <div className="acceptTerm">
           <span>
-            Kaydolarak, Koşullar'ı, Veri İlkesi'ni ve Çerezler İlkesi'ni kabul
-            etmiş olursun.
+            By signing up, you agree to our Terms , Data Policy and Cookies
+            Policy .
           </span>
         </div>
       </div>
 
       <div className="loginMiniPanel">
-        <span>Hesabın var mı? </span>
+        <span>Have an account?</span>
         <span>
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-            Giriş Yap
+            Log in
           </Link>
         </span>
       </div>

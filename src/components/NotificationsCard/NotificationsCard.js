@@ -12,7 +12,7 @@ const NotificationsCard = () => {
           <img src="https://picsum.photos/300" alt="follow avatar" />
         </div>
         <div className="followRequestsHeader">
-          <span>Takip isteği</span>
+          <span>Follow Requests</span>
           <span>Ahmet ve 20 others</span>
         </div>
         <div className="rightArrow">

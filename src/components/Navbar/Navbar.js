@@ -89,22 +89,22 @@ const Navbar = () => {
                     style={{ textDecoration: "none", color: "inherit" }}
                   >
                     <User />
-                    <span>Profil</span>
+                    <span>Profile</span>
                   </Link>
                   <div className="menuItem">
                     <Saved />
-                    <span>Kaydedildi</span>
+                    <span>Saved</span>
                   </div>
                   <div className="menuItem">
                     <Settings />
-                    <span>Ayarlar</span>
+                    <span>Settings</span>
                   </div>
                   <div className="menuItem">
                     <Change />
-                    <span>Hesap Değiştir</span>
+                    <span>Switch User</span>
                   </div>
                   <div className="menuItem">
-                    <span>Çıkış Yap</span>
+                    <span>Logout</span>
                   </div>
                 </div>
               </>

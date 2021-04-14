@@ -40,7 +40,7 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <label for="email">Telefon numarası veya e-posta</label>
+              <label for="email">Phone number, username or email</label>
             </div>
             <div className={`textInput ${password.length > 0 && "active"}`}>
               <input
@@ -53,32 +53,32 @@ const Login = () => {
             </div>
             <div className="loginBt">
               <button ref={loginBt} disabled>
-                Giriş Yap
+                Log In
               </button>
             </div>
           </form>
           <div className="or">
             <div className="orBorder"></div>
             <div>
-              <span>YA DA</span>
+              <span>OR</span>
             </div>
             <div className="orBorder"></div>
           </div>
           <div className="facebookLogin">
-            <span>Facebook ile Giriş Yap</span>
+            <span>Log in with Facebook</span>
           </div>
           <div className="rememberPass">
-            <span>Şifreni mi unuttum?</span>
+            <span>Forgot Password?</span>
           </div>
         </div>
         <div className="siginMiniPanel">
-          <span>Hesabın yok mu? </span>
+          <span>Don't have an account? </span>
           <span>
             <Link
               to="/signin"
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              Kaydol
+              Sign up
             </Link>
           </span>
         </div>
