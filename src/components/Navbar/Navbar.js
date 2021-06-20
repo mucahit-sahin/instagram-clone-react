@@ -77,7 +77,7 @@ const Navbar = () => {
           ></div>
           <div className="navProfilePhoto" onClick={() => setMenuOpen(true)}>
             <img
-              src="https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=1g6LJ4YP0F0AX9vD36T&ccb=7-4&oh=01038f2f288666f3684a6dc675bbc088&oe=60819413&_nc_sid=7bff83"
+              src="https://avatars2.githubusercontent.com/u/38807255?s=460&u=deb087d587be7f6a4000e4e710ec4d1daa6fde84&v=4"
               alt="profile"
             />
             {menuOpen && (

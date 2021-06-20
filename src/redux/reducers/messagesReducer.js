@@ -15,7 +15,7 @@ function messagesReducer(state = initialState, action) {
           message: action.payload.message,
           from: action.payload.from,
         });
-      return arr;
+      return [...arr];
     default:
       return state;
   }

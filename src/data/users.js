@@ -13,7 +13,7 @@ const users = [
   {
     username: "cnecati",
     userimage:
-      "https://pbs.twimg.com/profile_images/1348390204810407937/BmUVaYGD_400x400.jpg",
+      "https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=888&q=80",
     displayName: "Cihat Necati",
     biograpfy: "Türk Dili ve Edebiyatı",
     followingCount: 18,

@@ -9,7 +9,7 @@ const Post = ({
   postDescription,
 }) => {
   return (
-    <div className="post">
+    <article className="post">
       <header className="postHeader">
         <div className="postUserImage">
           <img src={userImage} alt="userimage" />
@@ -70,7 +70,7 @@ const Post = ({
           <button disabled>Send</button>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
