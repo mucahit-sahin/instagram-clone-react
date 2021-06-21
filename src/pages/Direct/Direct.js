@@ -6,6 +6,7 @@ import LastMessages from "../../components/LastMessages/LastMessages";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router";
 import Chat from "../../components/Chat/Chat";
+
 const Direct = () => {
   let { id } = useParams();
   let messages = useSelector((state) => state.messages);

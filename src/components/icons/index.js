@@ -15,3 +15,5 @@ export { default as Photo } from "./Photo";
 export { default as Posts } from "./Posts";
 export { default as Igtv } from "./Igtv";
 export { default as Tagged } from "./Tagged";
+export { default as Add } from "./Add";
+export { default as Search } from "./Search";

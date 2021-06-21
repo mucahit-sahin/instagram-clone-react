@@ -1,8 +1,8 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { Arrow } from "../icons";
 import LastMessagesItem from "../LastMessagesItem/LastMessagesItem";
+import BottomNavigation from "../../components/BottomNavigation/BottomNavigation";
 import "./LastMessages.scss";
 const LastMessages = ({ messages, users }) => {
   let { id } = useParams();
@@ -25,6 +25,7 @@ const LastMessages = ({ messages, users }) => {
             );
           }
         })}
+        <BottomNavigation />
       </div>
     </div>
   );

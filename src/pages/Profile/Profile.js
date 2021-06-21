@@ -3,6 +3,7 @@ import "./Profile.scss";
 import HomeBox from "../../components/HomeBox/HomeBox";
 import { Igtv, Posts, Saved, Settings, Tagged } from "../../components/icons";
 import ExploreRowCards from "../../components/ExploreRowCards/ExploreRowCards";
+import BottomNavigation from "../../components/BottomNavigation/BottomNavigation";
 import { useParams } from "react-router";
 
 const Profile = () => {
@@ -83,6 +84,7 @@ const Profile = () => {
           <ExploreRowCards />
           <ExploreRowCards />
         </div>
+        <BottomNavigation />
       </div>
     </HomeBox>
   );

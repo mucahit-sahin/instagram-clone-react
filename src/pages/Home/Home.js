@@ -1,13 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import HomeBox from "../../components/HomeBox/HomeBox";
+import BottomNavigation from "../../components/BottomNavigation/BottomNavigation";
 import Post from "../../components/Post/Post";
 import Suggestions from "../../components/Suggestions/Suggestions";
 import "./Home.scss";
 
 const Home = () => {
   let posts = useSelector((state) => state.posts);
-  console.log(posts);
   return (
     <HomeBox>
       <div className="feed">
@@ -21,6 +21,7 @@ const Home = () => {
               postDescription={post.description}
             />
           ))}
+          <BottomNavigation />
         </div>
         <div className="widgets">
           <Suggestions />
