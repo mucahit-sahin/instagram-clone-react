@@ -4,10 +4,16 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
   .profileHeaderRow {
     margin-top: 30px;
     display: flex;
     flex-direction: row;
+    @media (max-width: 500px) {
+      margin-top: 10px;
+    }
     .profilePhotoCol {
       flex: 0.2;
       display: flex;
@@ -15,7 +21,6 @@
       justify-content: center;
       img {
         border-radius: 50%;
-        width: 80%;
       }
     }
     .profileContentCol {
@@ -54,6 +59,9 @@
         display: flex;
         flex-direction: row;
         color: #262626;
+        @media (max-width: 500px) {
+          display: none;
+        }
         div {
           margin-right: 40px;
           span {
@@ -66,6 +74,9 @@
         display: flex;
         flex-direction: column;
         color: #262626;
+        @media (max-width: 500px) {
+          font-size: 14px;
+        }
         .displayName {
           font-weight: 600;
         }
@@ -76,13 +87,15 @@
     }
   }
   .profileTabs {
-    width: min-content;
+    width: 100%;
     margin: 40px auto 0px;
     display: flex;
     flex-direction: row;
     .tabItem {
+      flex: 0.25;
       display: flex;
       align-items: center;
+      justify-content: center;
       padding: 17px 0px;
       color: #8e8e8e;
       font-weight: 600;
@@ -102,9 +115,6 @@
           width: 12px;
           fill: #262626;
         }
-      }
-      &:not(:last-child) {
-        margin-right: 60px;
       }
     }
   }

@@ -12,9 +12,7 @@ const Profile = () => {
   React.useEffect(() => {
     if (id === "mucahitsah") {
       //my profile photo
-      setUserImage(
-        "https://instagram.fist4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117604855_289926268957956_1022152245096700514_n.jpg?tp=1&_nc_ht=instagram.fist4-1.fna.fbcdn.net&_nc_ohc=gAgXdD6fTW4AX-WCAFY&tn=RX4pWVV_5Okc-K47&edm=ABfd0MgAAAAA&ccb=7-4&oh=eda0b6d3005e678b97b99783ffcb5f1a&oe=60897D13&_nc_sid=7bff83"
-      );
+      setUserImage("https://avatars.githubusercontent.com/u/38807255?s=60&v=4");
     } else {
       //random profilPhoto
       setUserImage("https://picsum.photos/200");
