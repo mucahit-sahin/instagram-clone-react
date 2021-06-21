@@ -11,6 +11,7 @@
     margin-top: 30px;
     display: flex;
     flex-direction: row;
+    margin: 30px 10px 0px;
     @media (max-width: 500px) {
       margin-top: 10px;
     }
@@ -21,6 +22,7 @@
       justify-content: center;
       img {
         border-radius: 50%;
+        width: 100%;
       }
     }
     .profileContentCol {
@@ -100,6 +102,11 @@
       color: #8e8e8e;
       font-weight: 600;
       line-height: 0px;
+      span {
+        @media (max-width: 500px) {
+          display: none;
+        }
+      }
       &:hover {
         cursor: pointer;
       }
@@ -107,6 +114,10 @@
         margin-right: 5px;
         width: 12px;
         fill: #8e8e8e;
+        @media (max-width: 500px) {
+          width: 24px;
+          height: 24px;
+        }
       }
       &.active {
         border-top: 1px solid #262626;
@@ -114,6 +125,10 @@
         svg {
           width: 12px;
           fill: #262626;
+          @media (max-width: 500px) {
+            width: 24px;
+            height: 24px;
+          }
         }
       }
     }

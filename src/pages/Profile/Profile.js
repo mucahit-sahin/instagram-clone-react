@@ -12,7 +12,7 @@ const Profile = () => {
   React.useEffect(() => {
     if (id === "mucahitsah") {
       //my profile photo
-      setUserImage("https://avatars.githubusercontent.com/u/38807255?s=60&v=4");
+      setUserImage("https://avatars.githubusercontent.com/u/38807255");
     } else {
       //random profilPhoto
       setUserImage("https://picsum.photos/200");
